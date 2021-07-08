@@ -1,0 +1,14 @@
+.col-4 {
+  flex-direction: flex;
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .col-4 {
+    flex-direction: column;
+  }
+}
+
+.col-pad {
+  padding-top: 2rem;
+}

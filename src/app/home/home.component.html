@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Different Pokemon and their abilities</h1>
+
+  <div class="row">
+    <div
+      class="col-sm-4 col-pad"
+      *ngFor="let pokemon of pokemons; let i = index"
+    >
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">
+            Pokemon name : {{ pokemon.name | uppercase }}
+          </h2>
+          <img
+            mat-card-image
+            src="{{ pokemon.sprites.front_default }}"
+            style="width: 50%; height: auto"
+            alt="{{ pokemon.name }}"
+          />
+
+          <button class="btn btn-primary" (click)="gotoItems(i)">
+            Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
