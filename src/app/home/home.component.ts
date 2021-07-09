@@ -26,18 +26,19 @@ export class HomeComponent implements OnInit {
     console.log(this.pokemons);
   }
 
-  gotoItems(index) {
+  gotoItems(pokemon) {
+    console.log(pokemon);
     let navigationExtras: NavigationExtras = {
       queryParams: {
-        name: this.pokemons[index].name,
-        weight: this.pokemons[index].weight,
-        height: this.pokemons[index].height,
-        image: this.pokemons[index].sprites.other.dream_world.front_default,
-        base_experience: this.pokemons[index].base_experience,
+        name: pokemon.name,
+        weight: pokemon.weight,
+        height: pokemon.height,
+        image: pokemon.sprites.other.dream_world.front_default,
+        base_experience: pokemon.base_experience,
         ability:
-          this.pokemons[index].abilities[0].is_hidden === false
-            ? this.pokemons[index].abilities[0].ability.name
-            : this.pokemons[index].abilities[1].ability.name,
+        pokemon.abilities[0].is_hidden === false
+            ? pokemon.abilities[0].ability.name
+            : pokemon.abilities[1].ability.name,
       },
     };
     this._router.navigate(['/pokemon-details'], {
