@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nfmpokeapife 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nfmpokeapife
+  template:
+    metadata:
+      labels:
+        app: nfmpokeapife 
+    spec:
+      containers:
+        - name: nfmpokeapife 
+          image: pokeapireg.azurecr.io/nfmpokeapife
+          ports:
+          - containerPort: 80
