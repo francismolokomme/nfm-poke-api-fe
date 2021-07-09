@@ -11,28 +11,21 @@ export class PokemonDetailsComponent implements OnInit {
   details: any;
   pokemonName: string;
   pokemonAbility: string;
-  pokemonAbilityImg: string;
+  pokemonImage: string;
   pokemonWeight: number;
   pokemonHeight: number;
   pokemon_experience: number;
   constructor(private route: ActivatedRoute, private router: Router) {
     this.details = this.router.getCurrentNavigation().extras.state;
-    // console.log(this.details.pokemonsdetails);
-
-    // console.log('details :' + JSON.stringify(this.details, null, 2));
   }
 
   ngOnInit(): void {
-    // console.log('see details');
-    // this how you get the data e.g name below
-    // console.log(this.details.pokemonsdetails.queryParams.name);
-
     this.pokemonName = this.details.pokemonsdetails.queryParams.name;
     this.pokemonWeight = this.details.pokemonsdetails.queryParams.weight;
     this.pokemonHeight = this.details.pokemonsdetails.queryParams.height;
     this.pokemonHeight = this.details.pokemonsdetails.queryParams.height;
     this.pokemon_experience = this.details.pokemonsdetails.queryParams.base_experience;
     this.pokemonAbility = this.details.pokemonsdetails.queryParams.ability;
-    // this.pokemonAbilityImg = this.details.pokemonsdetails.queryParams.abilityImg;
+    this.pokemonImage = this.details.pokemonsdetails.queryParams.image;
   }
 }
