@@ -1,12 +1,11 @@
+<br /><br />
+<h1 style="text-align: center;">Details of the {{ pokemonName | uppercase }}</h1>
 <div class="container">
-  <h1>Details of the {{ pokemonName | uppercase }}</h1>
-
   <div class="row">
-    <div class="col-sm-6 col-pad">
-      <div class="card">
+    <div class="col-sm-12 col-pad">
+      <div class="card" style="width: 40rem; margin-top: 40px">
         <div class="card-body">
-          <h2 class="card-title">Pokemon Details</h2>
-
+          <img class="card-img-top img-fluid" src="{{pokemonImage}}" alt="{{pokemonName}}" />
           <p class="card-text">Weight :{{ pokemonWeight }}</p>
           <p class="card-text">Height : {{ pokemonHeight }}</p>
           <p class="card-text">Base Experience : {{ pokemon_experience }}</p>
