@@ -36,10 +36,12 @@ stages:
         command: 'install'
     - task: Npm@1
       inputs:
-        command: 'run test'
+        command: 'custom'
+        customCommand: 'run test'
     - task: Npm@1
       inputs:
-        command: 'run build'
+        command: 'custom'
+        customCommand: 'run build'
 
 - stage: Build
   displayName: Build stage
