@@ -26,7 +26,6 @@ export class PokemonDetailsComponent implements OnInit {
     this.pokemonName = this.details.queryParams.name;
     this.pokemonWeight = this.details.queryParams.weight;
     this.pokemonHeight = this.details.queryParams.height;
-    this.pokemonHeight = this.details.queryParams.height;
     this.pokemon_experience = this.details.queryParams.base_experience;
     this.pokemonAbility = this.details.queryParams.ability;
     this.pokemonImage = this.details.queryParams.image;
