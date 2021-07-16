@@ -14,11 +14,15 @@ import { ApiService } from '../api.service';
 })
 export class HomeComponent implements OnInit {
   pokemons = [];
-  pokemonSearch: string;
+  searchText: string;
 
   constructor(private _apiService: ApiService, private _router: Router) {}
 
   ngOnInit(): void {
+    this.getPostDetails();    
+  }
+
+  getPostDetails() {
     this._apiService.sendGetRequest().subscribe((data: any[]) => {
       console.log(data);
       this.pokemons = data;

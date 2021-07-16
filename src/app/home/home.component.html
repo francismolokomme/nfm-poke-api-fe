@@ -3,13 +3,13 @@
   <h1 style="text-align:center">SBSA Pokemon Assessment</h1>
 
   <div class="form-group col-sm-4">
-    <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="pokemonSearch" />
+    <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="searchText" />
   </div>
   <br/>
   <div class="row">
     <div
       class="col-sm-3 col-pad"
-      *ngFor="let pokemon of pokemons | filter:pokemonSearch; let i = index"
+      *ngFor="let pokemon of pokemons | filter : searchText; let i = index"
     >
       <div class="card" style="width: 18rem; margin-top: 20px">
         <img
