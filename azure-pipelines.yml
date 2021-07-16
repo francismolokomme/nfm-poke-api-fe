@@ -23,18 +23,6 @@ variables:
 
 
 stages:
-- stage: Test
-  displayName: Test stage
-  jobs:
-  - job: Test
-    displayName: Test
-    pool:
-      vmImage: $(vmImageName)
-    steps:
-    - task: Npm@1
-      inputs:
-        command: 'custom'
-        customCommand: 'run test'
 
 - stage: Build
   displayName: Build stage
